@@ -1,0 +1,25 @@
+{
+  "name": "madahorizon",
+  "version": "1.0.0",
+  "description": "MadaHorizon - Plateforme de tourisme à Madagascar",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "preview": "cd client && npm run preview",
+    "seed": "cd server && npm run seed",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "keywords": ["tourism", "travel", "madagascar", "booking"],
+  "author": "MadaHorizon Team",
+  "license": "PRIVATE"
+}
