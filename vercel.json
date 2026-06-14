@@ -1,8 +1,21 @@
 {
-  "buildCommand": "cd client && npm install && npm run build",
-  "framework": "vite",
+  "version": 2,
+  "buildCommand": "npm install && cd client && npm install && npm run build",
   "outputDirectory": "client/dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "framework": "vite",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "ignoreCommand": "git check-ignore -q $VERCEL_GIT_COMMIT_REF || echo skip",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
   ]
 }
