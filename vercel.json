@@ -1,5 +1,5 @@
 {
-  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "buildCommand": "cd client && npm install && npm run build",
   "framework": "vite",
   "outputDirectory": "client/dist",
   "rewrites": [
