@@ -1,6 +1,6 @@
 {
-  "rootDirectory": "client",
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "buildCommand": "cd client && npm run build",
+  "installCommand": "cd client && npm install",
+  "outputDirectory": "client/dist",
+  "framework": "vite"
 }
